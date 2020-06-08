@@ -3,7 +3,7 @@ import requests
 app = Flask(__name__)
 
 @app.route('/')
-
+@app.route('/home')
 def home():
 	data = requests.get("https://disease.sh/v2/countries/India?yesterday=true&strict=true")
 	data_dict = data.json()
